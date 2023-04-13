@@ -31,14 +31,21 @@ body {
         }
         span {
           padding: 4px;
-          &:nth-child(4n + 3) {
+          &:first-child {
+            font-size: 2rem;
+            text-align: center;
+          }
+          &:nth-of-type(2) {
             background: #04d457;
             color: black;
             border-radius: 7px;
           }
-        }
-        :first-child() {
-          font-size: 20px;
+          &:last-of-type {
+            border: 10px solid;
+            border-image-slice: 1;
+            border-width: 5px;
+            border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+          }
         }
       }
     }
