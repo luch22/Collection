@@ -1,0 +1,46 @@
+body {
+  width: 375px;
+  background-color: darkgrey;
+  margin: auto;
+  main {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    article {
+      height: 700px;
+      width: 375px;
+
+      section {
+        height: 90%;
+        width: 90%;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.148);
+        border-radius: 30px;
+        color: white;
+        margin: 30px auto;
+        padding: 10px;
+        overflow: hidden;
+
+        img {
+          width: 320px;
+          height: 250px;
+          object-fit: scale-down;
+        }
+        span {
+          padding: 4px;
+          &:nth-child(4n + 3) {
+            background: #04d457;
+            color: black;
+            border-radius: 7px;
+          }
+        }
+        :first-child() {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

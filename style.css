@@ -1,0 +1,45 @@
+body {
+  width: 375px;
+  background-color: darkgrey;
+  margin: auto;
+}
+body main {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+body main article {
+  height: 700px;
+  width: 375px;
+}
+body main article section {
+  height: 90%;
+  width: 90%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.148);
+  border-radius: 30px;
+  color: white;
+  margin: 30px auto;
+  padding: 10px;
+  overflow: hidden;
+}
+body main article section img {
+  width: 320px;
+  height: 250px;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+body main article section span {
+  padding: 4px;
+}
+body main article section span:nth-child(4n+3) {
+  background: #04d457;
+  color: black;
+  border-radius: 7px;
+}
+body main article section :first-child() {
+  font-size: 20px;
+}/*# sourceMappingURL=style.css.map */
