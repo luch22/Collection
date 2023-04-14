@@ -1,9 +1,19 @@
 body {
-  width: 375px;
-  background-color: darkgrey;
+  width: 100vw;
+  background: url(img/imgBackground.png) no-repeat center center;
   margin: auto;
+  background-attachment: fixed;
+  background-size: cover;
 }
-body h1 {
+body header {
+  border-radius: 30px;
+  margin: auto;
+  width: 85vw;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5490196078), 85%, rgba(0, 225, 255, 0.4));
+  color: white;
+  padding: 20px;
+}
+body header h1 {
   text-align: center;
 }
 body main {
@@ -22,7 +32,7 @@ body main article section {
   flex-flow: column;
   justify-content: space-around;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.148);
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 30px;
   color: white;
   margin: 30px auto;
@@ -52,4 +62,10 @@ body main article section span:last-of-type {
   border-image-slice: 1;
   border-width: 5px;
   border-image-source: linear-gradient(to right, rgba(255, 255, 255, 0), 15%, #ffffff, 85%, rgba(255, 255, 255, 0));
+}
+
+@media screen and (min-width: 1024px) {
+  body main {
+    justify-content: space-around;
+  }
 }/*# sourceMappingURL=style.css.map */
