@@ -56,10 +56,16 @@ body main article section:hover .suppr:hover {
   scale: 0.9;
   border: solid 3px white;
 }
+body main article section:hover .suppr:hover:checked {
+  background-color: #04d457;
+}
 body main article section #btnControl {
   display: none;
 }
-body main article section .suppr {
+body main article section #btnControl:checked ~ .suppr {
+  border: solid 3px green;
+}
+body main article section label .suppr {
   cursor: pointer;
   border: solid 3px red;
   background: url(img/x-square-fill.svg) no-repeat center center;
@@ -76,8 +82,8 @@ body main article section .suppr {
 body main article section img {
   width: 320px;
   height: 250px;
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 body main article section span {
   padding: 4px;

@@ -106,8 +106,11 @@ collection.forEach((i) => {
   let section = document.createElement("section");
   console.log(i[1]);
   section.innerHTML = `
-      <input type="checkbox" id="btnControl" />
-    <label class="btn" for="btnControl"><div class ="suppr"></div></label>
+      
+    <label class="btn" for="btnControl">
+    <input type="checkbox" id="btnControl" />
+    <div class ="suppr"></div>
+    </label>
     <span>${i.name} </span>
   <img src=" ${i.cover}" alt ="">
   <span>Genre:${i.genre}</span>
@@ -123,8 +126,8 @@ collection.forEach((i) => {
 document.querySelectorAll(".suppr").forEach((i) => {
   i.addEventListener("click", () => {
     setTimeout(() => {
-      i.parentNode.parentElement.remove();
-      console.log("Stuff be done"); //This will be delayed for one second
-    }, 2000);
+      i.parentNode.parentNode.parentElement.remove();
+      console.log("Suppresseur d'article ici");
+    }, 2000); //This will be delayed for one second
   });
 });

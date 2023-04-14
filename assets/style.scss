@@ -38,6 +38,9 @@ body {
           .suppr {
             display: block;
             &:hover {
+              &:checked {
+                background-color: #04d457;
+              }
               scale: 0.9;
               border: solid 3px white;
             }
@@ -55,28 +58,34 @@ body {
         margin: 30px auto;
         padding: 10px;
         // overflow: hidden;
-
+        //pas finis ici
         #btnControl {
           display: none;
         }
-        .suppr {
-          cursor: pointer;
-          border: solid 3px red;
-          background: url(img/x-square-fill.svg) no-repeat center center;
-          background-size: 115%;
-          margin: 5px;
-          display: none;
-          top: -3px;
-          right: -3px;
-          position: absolute;
-          width: 30px;
-          height: 30px;
-          border-radius: 0 30px 0 0;
+        #btnControl:checked ~ .suppr {
+          border: solid 3px green;
         }
+        label {
+          .suppr {
+            cursor: pointer;
+            border: solid 3px red;
+            background: url(img/x-square-fill.svg) no-repeat center center;
+            background-size: 115%;
+            margin: 5px;
+            display: none;
+            top: -3px;
+            right: -3px;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 0 30px 0 0;
+          }
+        }
+
         img {
           width: 320px;
           height: 250px;
-          object-fit: scale-down;
+          object-fit: contain;
         }
         span {
           padding: 4px;
