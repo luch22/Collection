@@ -24,6 +24,18 @@ body {
       width: 375px;
 
       section {
+        position: relative;
+        transition: color 0.5s, scale 0.5s, background-color 0.5s;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.808);
+          transition: color 1s, scale 3s, background-color 2s;
+          color: black;
+          scale: 1.05;
+
+          .suppr {
+            display: block;
+          }
+        }
         height: 90%;
         width: 90%;
         display: flex;
@@ -35,8 +47,19 @@ body {
         color: white;
         margin: 30px auto;
         padding: 10px;
-        overflow: hidden;
+        // overflow: hidden;
 
+        .suppr {
+          background: url(img/x-square-fill.svg) no-repeat center/cover;
+          display: none;
+          top: 0px;
+          right: 0px;
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          border-radius: 0 15px 0 0;
+          fill
+        }
         img {
           width: 320px;
           height: 250px;
@@ -74,6 +97,19 @@ body {
 
 @media screen and (min-width: 1024px) {
   body {
+    main {
+      justify-content: space-around;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    width: 1440px;
+    header {
+      width: auto;
+    }
+
     main {
       justify-content: space-around;
     }

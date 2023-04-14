@@ -105,7 +105,7 @@ collection.forEach((i) => {
   let article = document.createElement("article");
   let section = document.createElement("section");
   console.log(i[1]);
-  section.innerHTML = `<span>${i.name} </span>
+  section.innerHTML = `<div class ="suppr"></div><span>${i.name} </span>
   <img src=" ${i.cover}" alt ="">
   <span>Genre:${i.genre}</span>
   <span>Studio:${i.studio}</span>
