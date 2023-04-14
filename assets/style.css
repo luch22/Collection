@@ -62,8 +62,9 @@ body main article section:hover .suppr:hover:checked {
 body main article section #btnControl {
   display: none;
 }
-body main article section #btnControl:checked ~ .suppr {
-  border: solid 3px green;
+body main article section #btnControl:checked ~ section {
+  scale: 0.2;
+  transition: 2s;
 }
 body main article section label .suppr {
   cursor: pointer;
