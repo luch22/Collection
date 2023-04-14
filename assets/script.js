@@ -105,14 +105,26 @@ collection.forEach((i) => {
   let article = document.createElement("article");
   let section = document.createElement("section");
   console.log(i[1]);
-  section.innerHTML = `<div class ="suppr"></div><span>${i.name} </span>
+  section.innerHTML = `
+      <input type="checkbox" id="btnControl" />
+    <label class="btn" for="btnControl"><div class ="suppr"></div></label>
+    <span>${i.name} </span>
   <img src=" ${i.cover}" alt ="">
   <span>Genre:${i.genre}</span>
-  <span>Studio:${i.studio}</span>
+  <span>Studio:${i.studio}</span> 
   <span>Date:${i.date}</span>
    <span>Résumé: ${i.resume}</span>
    `;
   section.setAttribute("id", i.name.replaceAll(" ", "_"));
   main.append(article);
   article.append(section);
+});
+
+document.querySelectorAll(".suppr").forEach((i) => {
+  i.addEventListener("click", () => {
+    setTimeout(() => {
+      i.parentNode.parentElement.remove();
+      console.log("Stuff be done"); //This will be delayed for one second
+    }, 2000);
+  });
 });

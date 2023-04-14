@@ -28,37 +28,50 @@ body main article {
 body main article section {
   position: relative;
   transition: color 0.5s, scale 0.5s, background-color 0.5s;
+  -webkit-backdrop-filter: blur(0);
+          backdrop-filter: blur(0);
   height: 90%;
   width: 90%;
   display: flex;
   flex-flow: column;
   justify-content: space-around;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0);
   border-radius: 30px;
   color: white;
   margin: 30px auto;
   padding: 10px;
 }
 body main article section:hover {
-  background-color: rgba(255, 255, 255, 0.808);
-  transition: color 1s, scale 3s, background-color 2s;
-  color: black;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: color 0.5s, scale 0.4s, background-color 1s;
   scale: 1.05;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 body main article section:hover .suppr {
   display: block;
 }
-body main article section .suppr {
-  background: url(img/x-square-fill.svg) no-repeat center/cover;
+body main article section:hover .suppr:hover {
+  scale: 0.9;
+  border: solid 3px white;
+}
+body main article section #btnControl {
   display: none;
-  top: 0px;
-  right: 0px;
+}
+body main article section .suppr {
+  cursor: pointer;
+  border: solid 3px red;
+  background: url(img/x-square-fill.svg) no-repeat center center;
+  background-size: 115%;
+  margin: 5px;
+  display: none;
+  top: -3px;
+  right: -3px;
   position: absolute;
-  width: 20px;
-  height: 20px;
-  border-radius: 0 15px 0 0;
-  fill: #04d457;
+  width: 30px;
+  height: 30px;
+  border-radius: 0 30px 0 0;
 }
 body main article section img {
   width: 320px;
@@ -77,6 +90,7 @@ body main article section span:nth-of-type(2) {
   background: #04d457;
   color: black;
   border-radius: 7px;
+  text-align: center;
 }
 body main article section span:last-of-type {
   border: 10px solid;
