@@ -3,6 +3,9 @@ body {
   background-color: darkgrey;
   margin: auto;
 }
+body h1 {
+  text-align: center;
+}
 body main {
   display: flex;
   justify-content: center;
@@ -48,5 +51,5 @@ body main article section span:last-of-type {
   border: 10px solid;
   border-image-slice: 1;
   border-width: 5px;
-  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  border-image-source: linear-gradient(to right, rgba(255, 255, 255, 0), 15%, #ffffff, 85%, rgba(255, 255, 255, 0));
 }/*# sourceMappingURL=style.css.map */

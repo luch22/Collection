@@ -2,6 +2,9 @@ body {
   width: 375px;
   background-color: darkgrey;
   margin: auto;
+  h1 {
+    text-align: center;
+  }
   main {
     display: flex;
     justify-content: center;
@@ -44,7 +47,14 @@ body {
             border: 10px solid;
             border-image-slice: 1;
             border-width: 5px;
-            border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+            border-image-source: linear-gradient(
+              to right,
+              #ffffff00,
+              15%,
+              #ffffff,
+              85%,
+              #ffffff00
+            );
           }
         }
       }
