@@ -106,11 +106,9 @@ collection.forEach((i) => {
   let section = document.createElement("section");
   console.log(i[1]);
   section.innerHTML = `
-      
-    <label class="btn" for="btnControl">
-    <input type="checkbox" id="btnControl" />
-    <div class ="suppr"></div>
-    </label>
+    <input type="checkbox" id="mycheckbox" />
+    <label class="btn" for="mycheckbox">
+    <div class ="suppr"></div></label>
     <span>${i.name} </span>
   <img src=" ${i.cover}" alt ="">
   <span>Genre:${i.genre}</span>
